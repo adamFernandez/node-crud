@@ -1,11 +1,11 @@
 import mongoose from 'mongoose';
 
 const itemSchema = new mongoose.Schema({
-  "item" : Object,
+  "item" : {},
   "type" : String,
   "name" : String,
-  "options" : Array,
-}, { timestamps: true });
+  "options" : [String],
+}, { timestamps: true, minimize: false });
 
 const Item = mongoose.model('item', itemSchema);
 
